@@ -9,6 +9,8 @@ const FileStore = require('session-file-store')(session);
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var campsiteRouter = require('./routes/campsiteRouter')
+var promotionRouter = require('./routes/promotionRouter');
+var partnerRouter = require('./routes/partnerRouter');
 
 var app = express();
 const mongoose = require('mongoose');
@@ -84,7 +86,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/campsites', campsiteRouter)
-app.use('/promotions', promotionRouter)
+app.use('/promotion', promotionRouter)
 app.use('/partners', partnerRouter)
 
 // catch 404 and forward to error handler

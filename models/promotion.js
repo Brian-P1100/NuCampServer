@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 require('mongoose-currency').loadType(mongoose);
 const Currency = mongoose.Types.Currency;
 
-const partnerSchema = new Schema({
+const promotionSchema = new Schema({
     name: {
         type: String,
         required: true,
@@ -31,6 +31,6 @@ const partnerSchema = new Schema({
     timestamps: true
 });
         
-const Partner = mongoose.model('Promotion', promotionSchema);
+const Promotion = mongoose.model('Promotion', promotionSchema);
 
 module.exports = Promotion;
